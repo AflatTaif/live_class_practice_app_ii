@@ -20,6 +20,15 @@ class MyApp extends StatelessWidget{
 }
 
 class Home extends StatelessWidget{
+  List<String> StudentList = [
+    'Hasan',
+    'Rakib',
+    'Akib',
+    'Tarik',
+    'Habla',
+
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,209 +52,309 @@ class Home extends StatelessWidget{
               ),);
 
             }, icon:Icon(Icons.add)),
-            IconButton(onPressed: (){
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Money Has been transferred'),),);
-            }, icon:Icon(Icons.add)),
-            IconButton(onPressed: (){
-            showDialog(context: context, builder: (context){
-              return AlertDialog(
-                  title: Text('Send money'),
-                content: Text('Are sure you want to send money?'),
 
-              );
-
-            });
-            }, icon:Icon(Icons.add)),
           ],
 
         ),
-        body: Center(
-         child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           crossAxisAlignment: CrossAxisAlignment.center,
-           mainAxisSize: MainAxisSize.min,
-           children: [
-             // ElevatedButton(
-             //   style: ElevatedButton.styleFrom(
-             //     backgroundColor: Colors.yellow,
-             //     foregroundColor: Colors.green,
-             //     shape: RoundedRectangleBorder(
-             //       borderRadius: BorderRadius.circular(10),
-             //       side: BorderSide(
-             //        width: 2,
-             //       color: Colors.red,
-             //
-             //      ),
-             //
-             //
-             //     ),
-             //     textStyle: TextStyle(
-             //       fontSize:24,
-             //       fontWeight: FontWeight.w700,
-             //     ),
-             //     padding: EdgeInsets.fromLTRB(20, 2, 20, 2),
-             //
-             //   ),
-             //
-             //
-             //     onPressed: (){
-             //   print('Pressed');
-             //
-             // }, child: Text('Press')),
-             // TextButton(
-             //   style: TextButton.styleFrom(
-             //     foregroundColor: Colors.green,
-             //     textStyle: TextStyle(
-             //       fontSize: 24,
-             //       fontWeight: FontWeight.w700
-             //     )
-             //   ),
-             //
-             //     onPressed: (){
-             //
-             // },
-             //     child: Text('Text Button')),
-             // IconButton(onPressed: (){
-             //   print('Tapped icon button');
-             //
-             // },
-             //     icon: Icon(
-             //       Icons.call,
-             //       color: Colors.red,
-             //
-             //     ),
-             // ),
-             //
-             // GestureDetector(
-             //   onTap: (){
-             //     print('On tap detected');
-             //   },
-             //   onDoubleTap: (){
-             //     print('Double tap detected');
-             //   },
-             //   child: Column(
-             //   children: [
-             //     Text('Data in a button'),
-             //     Icon(Icons.add_circle),
-             //     Row(
-             //       children: [
-             //         Text('This is a row'),
-             //       ],
-             //     ),
-             //   ],
-             // ),
-             // ),
-             // InkWell(
-             //   splashColor: Colors.orange,
-             //   radius: 50,
-             //   borderRadius: BorderRadius.circular(30),
-             //   onTap: (){
-             //     print('On tap detected');
-             //   },
-             //   onDoubleTap: (){
-             //     print('Double tap detected');
-             //   },
-             //   child: Column(
-             //     children: [
-             //       Text('Data in a button'),
-             //       Icon(Icons.add_circle),
-             //       Row(
-             //         children: [
-             //           Text('This is a row'),
-             //         ],
-             //       ),
-             //     ],
-             //   ),
-             // ),
-             // Padding(
-             //     padding: EdgeInsets.all(30),
-             //   child: TextField(
-             //     style: TextStyle(
-             //       fontSize: 24,
-             //       color: Colors.orange,
-             //     ),
-             //     maxLength: 10,
-             //     decoration: InputDecoration(
-             //       hintText: 'Enter your Email',
-             //       hintStyle: TextStyle(
-             //         fontSize: 24,
-             //         fontWeight: FontWeight.w400,
-             //       ),
-             //       labelText: 'Email',
-             //       labelStyle:TextStyle(
-             //         fontWeight: FontWeight.w700,
-             //         fontSize: 20,
-             //         color: Colors.green,
-             //
-             //       ),
-             //       border: OutlineInputBorder(
-             //         borderRadius: BorderRadius.circular(16),
-             //       ),
-             //       focusedBorder: OutlineInputBorder(
-             //         borderSide: BorderSide(
-             //           width: 3,
-             //         color: Colors.red,
-             //         ),
-             //         borderRadius: BorderRadius.circular(16),
-             //       ),
-             //       enabledBorder: OutlineInputBorder(
-             //         borderSide: BorderSide(
-             //           color: Colors.yellow,
-             //           width: 3,
-             //         ),
-             //         borderRadius: BorderRadius.circular(16),
-             //       ),
-             //       fillColor: Colors.grey.shade50,
-             //       filled: true,
-             //       suffixIcon: Icon(Icons.remove_red_eye),
-             //
-             //     ),
-             //   ),
-             // )
-             Container(
-               width: 100,
-               height: 100,
-               decoration: BoxDecoration(
-                 color: Colors.green,
-                 borderRadius: BorderRadius.circular(16),
-                 border: Border.all(color: Colors.red,width: 4),
-                 image: DecorationImage(
-                   image: NetworkImage('https://images.pexels.com/photos/20066214/pexels-photo-20066214/free-photo-of-danny-aldridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                   fit: BoxFit.cover,
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //
+      //
+      //
+      //
+      //
+      //
+      //     ],
+      //   ),
+      // ),
 
-                 ),
-                 boxShadow: [
-                   BoxShadow(
-                     color: Colors.grey.withOpacity(0.9),
-                     spreadRadius: 3,
-                     blurRadius: 8,
-                     offset: Offset(2,3),
-                   ),
-                 ],
+      // body:SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //       Text('I love dart'),
+      //
+      //
+      //
+      //
+      //     ],
+      //   ),
+      //
+      // ) ,
+      // body: ListView(
+
+      //   children: [
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //     Text('App devlopment is fun'),
+      //   ],
+      // ),
+
+      // body: ListView.builder(
+      //   itemCount: 100,
+      //
+      //
+      //     itemBuilder: (context,Index) {
+      //     return Text('${Index+1}',
+      //       style: TextStyle(
+      //           color: Colors.red,
+      //           fontWeight: FontWeight.w700,
+      //           fontSize: 28,
+      //       ),
+      //     );
+      //
+      //
+      //     }
+      //
+      // )
+
+      // body: ListView.builder(
+      //   itemCount: StudentList.length,
+      //     itemBuilder: (context, index){
+      //   return Padding(
+      //       padding: EdgeInsets.all(12),
+      //     child: Column(
+      //       children: [
+      //         Text(StudentList[index], style: TextStyle(
+      //             fontSize: 28,
+      //             fontWeight: FontWeight.w400),
+      //         ),
+      //         Divider()
+      //       ],
+      //     )
+      //   );
+      //
+      // }
+      //
+      //
+      // ),
+      // body: ListView.separated(
+      //   itemCount: StudentList.length,
+      //   itemBuilder: (context, index){
+      //   return Padding(
+      //       padding: EdgeInsets.all(10),
+      //     child: Column(
+      //       children: [
+      //         Text(StudentList[index],
+      //
+      //           style: TextStyle(
+      //             fontSize: 28,
+      //             fontWeight: FontWeight.w400),
+      //         ),
+      //       ],
+      //     )
+      //   );
+      //
+      // },
+      //
+      //     separatorBuilder: (context, index){
+      //     return Divider(
+      //       height: 32,
+      //       thickness: 10,
+      //       endIndent: 32,
+      //       indent: 19,
+      //       color: Colors.red,
+      //     );
+      //
+      //
+      //     },
+      //
+      // ),
+      // body: GridView(
+      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      //   children: [
+      //     Text('1'),
+      //     Text('2'),
+      //     Text('3'),
+      //     Text('4'),
+      //     Text('5'),
+      //     Text('6'),
+      //     Text('7'),
+      //     Text('8'),
+      //     Text('9'),
+      //   ],
+      // ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+        ListView.builder(
+          shrinkWrap: true,
+          primary: false,
+          itemCount: StudentList.length,
+            itemBuilder: (context, index){
+          return Padding(
+              padding: EdgeInsets.all(12),
+            child: Column(
+              children: [
+                Text(StudentList[index], style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w400),
+                ),
+                Divider()
+              ],
+            )
+          );
+
+        }
 
 
-               ),
+        ),
+            GridView.builder(
+              itemCount: 100,
+                shrinkWrap: true,
+                primary: false,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        
+                    crossAxisCount: 2,
+                  childAspectRatio: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,),
+                itemBuilder: (context,index){
+                  return Column(
+                    children: [
+                      Text('Roll - ${index+1}',
+                        style: TextStyle(color: Colors.cyan,
+                            backgroundColor: Colors.yellow),
+                      ),
+
+                    ],
+                  );
+                }),
+          ],
+        ),
+      ),
 
 
-               child: Text(
-                 'Hello world',
-                 style: TextStyle(
-                   fontSize: 16,
-                   color:Colors.white ,
-                   fontWeight: FontWeight.w700,
-
-               ),
-               ),
-               alignment: Alignment.bottomCenter,
-
-             ),
 
 
 
 
-               ],
-             ),
-             ),
+
 
 
          );
