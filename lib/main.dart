@@ -1,25 +1,58 @@
 // Navigation -  push, pop, replace, removeUntil (without named navigation)
 
-import 'package:live_class_practice_app_ii/home.dart';
-import 'package:flutter/material.dart';
-import 'package:live_class_practice_app_ii/profile.dart';
+
+import 'package:flutter/cupertino.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(IOSStyleApp());
 
 }
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class IOSStyleApp extends StatelessWidget {
+  const IOSStyleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const CupertinoApp(
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+
     );
   }
 }
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Home'),
+        trailing: CupertinoButton(
+          onPressed: (){},
+          child: Icon(CupertinoIcons.add),
+      ),
+      ),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CupertinoActivityIndicator(
+              radius: 30,
+            ),
+            CupertinoSwitch(value: false, onChanged: (value){}),
+          ],
+        ),
+      ),
+
+
+
+        );
+
+
+  }
+}
+
 
 
 
